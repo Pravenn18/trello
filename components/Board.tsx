@@ -37,6 +37,7 @@ const Board = () => {
   };
 
   const handleColumnDragEnd = (e: React.DragEvent<HTMLDivElement>) => {
+    e.stopPropagation();
     const columnId = e.dataTransfer.getData("columnId");
     setActiveColumn(false);
 

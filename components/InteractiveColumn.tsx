@@ -28,6 +28,7 @@ const InteractiveColumn = ({
   // For hover
   const [active, setActive] = useState(false);
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>, card: Card) => {
+    e.stopPropagation();
     e.dataTransfer.setData("cardId", card.id);
   };
 
